@@ -1,0 +1,241 @@
+.site {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 20vh 1fr 1fr 20vh;
+  grid-template-areas:
+    "title title"
+    "main main"
+    "buttonbox buttonbox"
+    "sidebar sidebar"
+    "footer masthead";
+  grid-gap: .3em;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 600px) {
+  .site {
+    display: grid;
+    position: fixed;
+    grid-template-columns: 400px 1fr 1fr;
+    grid-template-rows: 100px 260px 1fr 100px;
+    grid-template-areas:
+      "title title masthead"
+      "main sidebar sidebar"
+      "buttonbox sidebar sidebar"
+      "footer footer footer";
+      margin: .3em;
+      width: calc(100% - .6em);
+    max-height: 100vh;
+    min-height: calc(100vh - .6em);
+  }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page-title {
+  grid-area: title;
+  border-radius: 10px;
+}
+
+#result-box {
+  border-radius: 10px;
+}
+
+.masthead {
+  /* grid-column: 1/2;
+  grid-row: 1/2; */
+  /* z-index: +100; */
+  grid-area: masthead;
+  border-radius: 10px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px;
+  grid-column-gap: .3em;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  overflow: scroll;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.sidebar p {
+  margin: 0;
+}
+
+.main-content {
+  grid-area: main;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.button-box {
+  grid-area: buttonbox;
+  border-radius: 10px;
+  background-color: rgba(0,130,190,.4);
+  color: white;
+  padding: 5px;
+}
+
+.footer-content {
+  grid-area: footer;
+  border-radius: 10px;
+}
+
+.logging-button {
+  font-family: 'Courier';
+  font-size: 10px;
+  background-color: rgba(40,40,155,.9);
+  margin: 4px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#logButton {
+  grid-area: logbutton;
+  cursor: pointer;
+}
+
+#likeButton {
+  grid-area: likebutton;
+  cursor: pointer;
+}
+
+#inButton {
+  grid-area: inbutton;
+  cursor: pointer;
+}
+
+#outButton {
+  grid-area: outbutton;
+  cursor: pointer;
+}
+
+#playButton {
+  grid-area: playButton;
+  cursor: pointer;
+  background-color: rgba(70,190,90,0.9);
+}
+
+
+#pauseButton {
+  grid-area: pauseButton;
+  cursor: pointer;
+  background-color: rgba(170,70,90,0.9);
+}
+
+
+#player {
+  border-radius: 10px;
+}
+
+#the-button-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "playButton pauseButton"
+    "logbutton likebutton"
+    "inbutton outbutton";
+
+}
+
+#video-button-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 45px 45px;
+  padding: 5px;
+}
+
+.video-link-button {
+  cursor: pointer;
+  background-color: rgba(70,70,70,0.9);
+  font-family: 'Courier';
+  font-size: 10px;
+  margin: 4px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.video-link-button-input {
+  background-color: rgba(70,190,90,0.9);
+  font-family: 'Courier';
+  font-size: 10px;
+  margin: 4px;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.video-link-button-submit {
+  cursor: pointer;
+  background-color: rgba(70,190,90,0.9);
+  font-family: 'Courier';
+  font-size: 10px;
+  margin: 4px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-input {
+  padding-left: 10px;
+  font-size: 12px
+}
+
+.no-background{
+  color: white;
+  background-color: rgba(0,0,0,0.0);
+}
+
+h2 {
+
+}
+
+h1 {
+
+}
+
+input {
+  font-family: monospace;
+  font-size: 10px;
+  width: 100px;
+}
+
+.masthead-buttons {
+  background-color: rgba(220,0,170,.4);
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 32px;
+  font-size: 10px;
+  line-height: 1.2em;
+}
+
+#userVideoId {
+  font-size: 10px;
+  margin-top:0;
+  margin-bottom: 5px;
+  margin-right: 4px;
+  border: 0px solid red;
+  width: calc(100% - .2em);
+  height: 22px;
+  background-color: rgba(255,255,255,0.6);
+
+}
